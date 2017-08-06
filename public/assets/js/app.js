@@ -51,8 +51,6 @@ trainDatabase.ref().on("child_added", function(childSnapshot){
   var deparTime = moment().hour(hour).minute(min);
   var now = moment();
 
-  console.log("test");
-
   while(moment(now).isAfter(deparTime) === true){
     deparTime = moment(deparTime).add(freq, "m");
   }
